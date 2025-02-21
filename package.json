@@ -1,0 +1,48 @@
+{
+  "name": "@muze-nl/solid",
+  "version": "0.1.-",
+  "description": "solid client with metro, oldm, jsfs",
+  "type": "module",
+  "source": [
+    "src/client.mjs"
+  ],
+  "main": "src/client.mjs",
+  "scripts": {
+    "test": "tap test/*.mjs",
+    "tap": "tap",
+    "build-dev": "esbuild --bundle src/client.mjs --outfile=dist/browser.js --sourcemap;",
+    "build": "esbuild --bundle src/client.mjs --outfile=dist/browser.min.js --minify --sourcemap;"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muze-nl/solid-client.git"
+  },
+  "author": "auke@muze.nl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/muze-nl/solid-client/issues"
+  },
+  "homepage": "https://github.com/muze-nl/solid-client/#readme",
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "eslint": "^8.13.0",
+    "tap": "^16.0.1"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "files": [
+    "/src",
+    "/dist",
+    "/LICENSE",
+    "/README.md"
+  ],
+  "dependencies": {
+    "@muze-nl/jaqt": "^0.9.8",
+    "@muze-nl/jsfs": "^0.3.0",
+    "@muze-nl/metro": "^0.6.5",
+    "@muze-nl/metro-oauth2": "^0.6.0",
+    "@muze-nl/metro-oidc": "^0.4.0",
+    "@muze-nl/oldm": "^0.3.1"
+  }
+}
